@@ -27,7 +27,7 @@ const LandDetails = () => {
 
     return (
         <div>
-            <h2>Land Details</h2>
+            <h1>Land Details</h1>
             <input
                 type="number"
                 placeholder="Enter Token ID"
