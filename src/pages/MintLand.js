@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { getContract } from "../services/contract";
+import "./MintLand.css";
 
 const MintLand = () => {
     const [formData, setFormData] = useState({
@@ -32,7 +33,7 @@ const MintLand = () => {
     };
 
     return (
-        <div>
+        <div className="mint-land-wrapper">
             <h2>Mint New Land</h2>
             <input type="text" name="owner" placeholder="Owner Address" onChange={handleChange} />
             <input type="text" name="ownerName" placeholder="Owner Name" onChange={handleChange} />

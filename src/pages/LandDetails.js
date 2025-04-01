@@ -1,6 +1,7 @@
 // src/pages/LandDetails.js
 import React, { useState } from "react";
 import { getContract } from "../services/contract";
+import "./MintLand.css";
 
 const LandDetails = () => {
     const [tokenId, setTokenId] = useState("");

@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
+import "./MintLand.css";
+
 
 const CreateMetadata = ({ onMetadataCID }) => {
     const [formData, setFormData] = useState({
@@ -72,7 +74,7 @@ const CreateMetadata = ({ onMetadataCID }) => {
     };
 
     return (
-        <div>
+        <div className="mint-land-wrapper">
             <h2>Create Metadata</h2>
             <input type="text" name="ownerAddress" placeholder="Owner Wallet Address" onChange={handleChange} />
             <input type="text" name="ownerName" placeholder="Owner Name" onChange={handleChange} />

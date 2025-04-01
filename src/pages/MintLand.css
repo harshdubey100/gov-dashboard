@@ -1,0 +1,106 @@
+/* MintLand.css */
+
+.mint-land-wrapper {
+    display: block; /* Preserve original display property */
+    unicode-bidi: isolate; /* Preserve original unicode-bidi property */
+    min-height: 60vh;
+    background: linear-gradient(to right, #6B46C1, #F97316); /* Matching gradient */
+    display: flex; /* Override for centering, revert to block for content */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: rgb(250, 247, 247);
+    font-family: 'Poppins', sans-serif;
+    background: rgba(154, 132, 132, 0.181); /* Card background */
+    padding: 2rem;
+    border-radius: 15px; /* Cardish rounded corners */
+    box-shadow: 0 8px 16px rgba(235, 228, 228, 0); /* Elevated shadow */
+    width: 100%;
+    max-width: 100%; /* Formish width */
+    margin: 0 auto; /* Center the card */
+    backdrop-filter: blur(5px); /* Optional frosted glass effect */
+}
+
+.mint-land-wrapper h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.mint-land-wrapper input {
+    display: block; /* Stack inputs vertically */
+    width: 100%;
+    max-width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 50px;
+    box-sizing: border-box;
+    background: rgba(251, 251, 251, 0.682);
+    color: #333;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+.mint-land-wrapper input:focus {
+    border: 2px solid #4B5EFC; /* Blue focus ring */
+}
+
+.mint-land-wrapper button {
+    display: block; /* Ensure button is part of form flow */
+    width: 100%;
+    max-width: 200px; /* Controlled button width */
+    padding: 0.75rem 1.5rem;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #364ff1; /* Blue button */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 0 auto; /* Center the button */
+}
+
+.mint-land-wrapper button:hover {
+    background-color: #3A4DDC; /* Darker blue on hover */
+}
+
+.mint-land-wrapper button:active {
+    background-color: #2C3FB8; /* Even darker when clicked */
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .mint-land-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .mint-land-wrapper input {
+        width: 18%; /* Approx equal width for 5 inputs */
+        min-width: 150px;
+        margin-bottom: 0; /* Remove margin when in flex row */
+    }
+
+    .mint-land-wrapper button {
+        width: auto; /* Allow button to size naturally */
+    }
+}
+
+@media (max-width: 480px) {
+    .mint-land-wrapper h2 {
+        font-size: 1.5rem;
+    }
+
+    .mint-land-wrapper input,
+    .mint-land-wrapper button {
+        font-size: 0.9rem;
+        padding: 0.5rem;
+    }
+}

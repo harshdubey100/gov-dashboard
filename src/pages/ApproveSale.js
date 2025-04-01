@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { getContract } from "../services/contract";
 import { ZeroAddress } from "ethers"; // Import constants from ethers
+import "./ApproveSale.css";
 
 const ApproveSale = () => {
     const [tokenId, setTokenId] = useState("");
@@ -108,35 +109,34 @@ const ApproveSale = () => {
     };
 
     return (
-        <div>
+        <div className="approve-land-wrapper">
             <h2>Approve Land Sale</h2>
-            <input 
-                type="number" 
-                placeholder="Token ID" 
-                value={tokenId} 
-                onChange={(e) => setTokenId(e.target.value)} 
+            <input
+                type="number"
+                placeholder="Token ID"
+                value={tokenId}
+                onChange={(e) => setTokenId(e.target.value)}
             />
             <button onClick={checkSaleStatus}>Check Sale Status</button>
             {saleStatus && <p>{saleStatus}</p>}
             {saleBuyer && <p>Buyer: {saleBuyer}</p>}
-
-            <input 
-                type="text" 
-                placeholder="Buyer Address" 
-                value={buyer} 
-                onChange={(e) => setBuyer(e.target.value)} 
+            <input
+                type="text"
+                placeholder="Buyer Address"
+                value={buyer}
+                onChange={(e) => setBuyer(e.target.value)}
             />
-            <input 
-                type="text" 
-                placeholder="New Owner Name" 
-                value={newOwnerName} 
-                onChange={(e) => setNewOwnerName(e.target.value)} 
+            <input
+                type="text"
+                placeholder="New Owner Name"
+                value={newOwnerName}
+                onChange={(e) => setNewOwnerName(e.target.value)}
             />
-            <input 
-                type="text" 
-                placeholder="New Metadata CID" 
-                value={newMetadataCID} 
-                onChange={(e) => setNewMetadataCID(e.target.value)} 
+            <input
+                type="text"
+                placeholder="New Metadata CID"
+                value={newMetadataCID}
+                onChange={(e) => setNewMetadataCID(e.target.value)}
             />
             <button onClick={approveSale}>Approve Sale</button>
         </div>
